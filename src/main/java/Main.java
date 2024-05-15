@@ -22,10 +22,15 @@ class Main {
             System.out.println("Dodaj nowego studenta:");
             System.out.print("Imię: ");
             String name = scanner.next();
+            System.out.print("Nazwisko: ");
+            String surname = scanner.next();
+            ;
             System.out.print("Wiek: ");
             int age = scanner.nextInt();
             scanner.nextLine();
-            s.addStudent(new Student(name, age));
+            System.out.print("Data urodzenia: ");
+            String date = scanner.next();
+            s.addStudent(new Student(name, surname, age, date));
             break;
           case 2:
             var students = s.getStudents();
